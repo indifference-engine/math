@@ -234,4 +234,6 @@ int main(const int argc, const char *const argv)
       0.0f,
       0.0f,
       1.0f);
+
+  return exit_code;
 }

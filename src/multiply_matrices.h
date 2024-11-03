@@ -16,4 +16,4 @@ void multiply_matrices(
     const float *const multiplicand,
     float *const product);
 
-#define
+#endif

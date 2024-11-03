@@ -196,4 +196,6 @@ int main(const int argc, const char *const argv)
       0.0f,
       -0.078571f,
       0.278571f);
+
+  return exit_code;
 }
