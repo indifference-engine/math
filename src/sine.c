@@ -1,4 +1,3 @@
-#include "stdio.h" // todo
 #include "sine_table.h"
 #include "sine.h"
 #include "pi.h"
