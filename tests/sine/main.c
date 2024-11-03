@@ -1,9 +1,9 @@
-#include "stdio.h"
+#include <stdio.h>
 #include "../../src/sine.h"
 
 static int exit_code = 0;
 
-static int given(const float radians, const float expected)
+static void given(const float radians, const float expected)
 {
   const float actual = sine(radians);
 
@@ -14,8 +14,11 @@ static int given(const float radians, const float expected)
   }
 }
 
-int main(const int argc, const char *const argv)
+int main(const int argc, const char *const *const argv)
 {
+  (void)(argc);
+  (void)(argv);
+
   given(-14.137166941154069573081895224758f, -1.0f);
   given(-14.0f, -0.99060735569487030787535480401459f);
   given(-13.0f, -0.42016703682664092186895503547688f);

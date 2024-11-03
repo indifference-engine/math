@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 #include "../../src/model.h"
 
 static int exit_code = 0;
@@ -101,8 +101,11 @@ static void scenario(
   check(description, "inverse", 15, inverse_15, inverse);
 }
 
-int main(const int argc, const char *const argv)
+int main(const int argc, const char *const *const argv)
 {
+  (void)(argc);
+  (void)(argv);
+
   scenario(
       "A",
       -1.059999942779541f,
