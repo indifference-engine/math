@@ -3,7 +3,7 @@
 #define MULTIPLY_MATRICES_H
 
 /**
- * Calculates the product of two matrices.
+ * Calculates the product of two 4x4 matrices.
  * @param multiplier The first 4x4 matrix to multiply.  Behavior is undefined if
  *                   any are NaN, infinity or negative infinity.
  * @param multiplicand The second 4x4 matrix to multiply.  Behavior is undefined
