@@ -15,6 +15,7 @@ static void check(
   if (actual_value != actual_value || expected < actual_value - 0.005f || expected > actual_value + 0.005f)
   {
     printf("FAIL %s %s %d expected %f actual %f\n", description_a, description_b, index, expected, actual[index]);
+    exit_code = 1;
   }
 }
 

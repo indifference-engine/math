@@ -14,6 +14,7 @@ static void check_exact_item(
   if (expected != actual_value)
   {
     printf("FAIL %s %d expected %f actual %f\n", description, index, expected, actual_value);
+    exit_code = 1;
   }
 }
 
@@ -31,10 +32,6 @@ static void check_exact_matrix(
     const float expected_9,
     const float expected_10,
     const float expected_11,
-    const float expected_12,
-    const float expected_13,
-    const float expected_14,
-    const float expected_15,
     const float *const actual)
 {
   check_exact_item(description, 0, expected_0, actual);
@@ -49,10 +46,6 @@ static void check_exact_matrix(
   check_exact_item(description, 9, expected_9, actual);
   check_exact_item(description, 10, expected_10, actual);
   check_exact_item(description, 11, expected_11, actual);
-  check_exact_item(description, 12, expected_12, actual);
-  check_exact_item(description, 13, expected_13, actual);
-  check_exact_item(description, 14, expected_14, actual);
-  check_exact_item(description, 15, expected_15, actual);
 }
 
 static void check_exact_vector(
@@ -78,6 +71,7 @@ static void check_loose_item(
   if (actual_value != actual_value || expected < actual_value - 0.005f || expected > actual_value + 0.005f)
   {
     printf("FAIL %s %d expected %f actual %f\n", description, index, expected, actual_value);
+    exit_code = 1;
   }
 }
 
@@ -117,10 +111,6 @@ int main(const int argc, const char *const *const argv)
       0.2559f,
       0.1717f,
       0.7705f,
-      0.7533f,
-      0.0134f,
-      0.8475f,
-      0.7991f,
   };
 
   float different_product[3];
@@ -148,10 +138,6 @@ int main(const int argc, const char *const *const argv)
       0.2559f,
       0.1717f,
       0.7705f,
-      0.7533f,
-      0.0134f,
-      0.8475f,
-      0.7991f,
       different_multiplicand);
 
   check_loose_vector(
@@ -180,10 +166,6 @@ int main(const int argc, const char *const *const argv)
       0.2559f,
       0.1717f,
       0.7705f,
-      0.7533f,
-      0.0134f,
-      0.8475f,
-      0.7991f,
   };
 
   multiply_vector_by_matrix(same_multiplier, same_multiplicand, same_multiplier);
@@ -202,10 +184,6 @@ int main(const int argc, const char *const *const argv)
       0.2559f,
       0.1717f,
       0.7705f,
-      0.7533f,
-      0.0134f,
-      0.8475f,
-      0.7991f,
       same_multiplicand);
 
   check_loose_vector(

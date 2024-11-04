@@ -14,6 +14,7 @@ static void check_exact_item(
   if (expected != actual_value)
   {
     printf("FAIL %s %d expected %f actual %f\n", description, index, expected, actual_value);
+    exit_code = 1;
   }
 }
 
@@ -66,6 +67,7 @@ static void check_loose_item(
   if (actual_value != actual_value || expected < actual_value - 0.005f || expected > actual_value + 0.005f)
   {
     printf("FAIL %s %d expected %f actual %f\n", description, index, expected, actual_value);
+    exit_code = 1;
   }
 }
 
