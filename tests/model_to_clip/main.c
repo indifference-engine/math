@@ -496,5 +496,138 @@ int main(const int argc, const char *const *const argv)
       0.1173f,
       same_far_multiplier);
 
+  const float different_w_multiplier[] = {
+      0.0f,
+      0.3564f,
+      0.0f,
+  };
+
+  const float different_w_multiplicand[] = {
+      -0.701645f,
+      0.879247f,
+      2.122090f,
+      4.635321f,
+      1.474376f,
+      -5.586166f,
+      1.872331f,
+      14.833803f,
+      0.930089f,
+      -0.342990f,
+      -1.062371f,
+      -0.423478f,
+      0.262333f,
+      0.0f,
+      -0.299643f,
+      0.0f,
+  };
+
+  float different_w_product[] = {
+      35925.328792f,
+      78794.8724f,
+      -348290348.42f,
+  };
+
+  const int different_w_result = model_to_clip(different_w_multiplier, different_w_multiplicand, different_w_product);
+
+  if (different_w_result != CULLED_BY_W_ZERO)
+  {
+    printf("FAIL different w zero result %d\n", different_w_result);
+    exit_code = 1;
+  }
+
+  check_exact_vector(
+      "different w zero multiplier",
+      0.0f,
+      0.3564f,
+      0.0f,
+      different_w_multiplier);
+
+  check_exact_matrix(
+      "different w zero multiplicand",
+      -0.701645f,
+      0.879247f,
+      2.122090f,
+      4.635321f,
+      1.474376f,
+      -5.586166f,
+      1.872331f,
+      14.833803f,
+      0.930089f,
+      -0.342990f,
+      -1.062371f,
+      -0.423478f,
+      0.262333f,
+      0.0f,
+      -0.299643f,
+      0.0f,
+      different_w_multiplicand);
+
+  check_loose_vector(
+      "different w zero product",
+      35925.328792f,
+      78794.8724f,
+      -348290348.42f,
+      different_w_product);
+
+  float same_w_multiplier[] = {
+      0.0f,
+      0.3564f,
+      0.0f,
+  };
+
+  const float same_w_multiplicand[] = {
+      -0.701645f,
+      0.879247f,
+      2.122090f,
+      4.635321f,
+      1.474376f,
+      -5.586166f,
+      1.872331f,
+      14.833803f,
+      0.930089f,
+      -0.342990f,
+      -1.062371f,
+      -0.423478f,
+      0.262333f,
+      0.0f,
+      -0.299643f,
+      0.0f,
+  };
+
+  const int same_w_result = model_to_clip(same_w_multiplier, same_w_multiplicand, same_w_multiplier);
+
+  if (same_w_result != CULLED_BY_W_ZERO)
+  {
+    printf("FAIL same w zero result %d\n", same_w_result);
+    exit_code = 1;
+  }
+
+  check_exact_matrix(
+      "same w zero multiplicand",
+      -0.701645f,
+      0.879247f,
+      2.122090f,
+      4.635321f,
+      1.474376f,
+      -5.586166f,
+      1.872331f,
+      14.833803f,
+      0.930089f,
+      -0.342990f,
+      -1.062371f,
+      -0.423478f,
+      0.262333f,
+      0.0f,
+      -0.299643f,
+      0.0f,
+      same_w_multiplicand);
+
+  check_loose_vector(
+      "same w zero product",
+      0.0f,
+      0.3564f,
+      0.0f,
+      same_w_multiplier);
+
   return exit_code;
 }
