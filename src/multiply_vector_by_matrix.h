@@ -3,7 +3,7 @@
 #define MULTIPLY_VECTOR_BY_MATRIX_H
 
 /**
- * Multiplies a vector by a matrix.
+ * Multiplies a 3-dimensional vector by a 4x3 matrix.
  * @remark Do NOT use to convert to or from clip space - no W division is
  *         performed.
  * @param multiplier The 3-dimensional vector to multiply.  Behavior is
