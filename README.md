@@ -1,4 +1,4 @@
-# Lines
+# Math
 
 C library for common mathematical operations.
 
