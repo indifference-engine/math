@@ -9,6 +9,6 @@
  * @param value The float to check.
  * @return When the given float is not a number, true, otherwise, false.
  */
-bool is_nan(float value);
+bool is_nan(const float value);
 
 #endif
