@@ -25,7 +25,9 @@ corresponding function available.
 
 | Name                | Description        |
 | ------------------- | ------------------ |
+| `HALF_PI`           | The value of PI/2. |
 | `PI`                | The value of PI.   |
+| `DOUBLE_PI`         | The value of 2PI.  |
 | `NAN`               | Not a number.      |
 | `POSITIVE_INFINITY` | Positive infinity. |
 | `NEGATIVE_INFINITY` | Negative infinity. |
