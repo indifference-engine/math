@@ -46,6 +46,7 @@ corresponding function available.
 | `min`                       | Determines the lesser of two floats.                                                                                                                                                      |
 | `max`                       | Determines the greater of two floats.                                                                                                                                                     |
 | `clamp`                     | Clamps a value to between an upper and lower bound.                                                                                                                                       |
+| `interpolate_linearly`      | Linearly interpolates between two values.                                                                                                                                                 |
 
 ## Tests
 
