@@ -49,6 +49,7 @@ corresponding function available.
 | `max`                       | Determines the greater of two floats.                                                                                                                                                     |
 | `clamp`                     | Clamps a value to between an upper and lower bound.                                                                                                                                       |
 | `interpolate_linearly`      | Linearly interpolates between two values.                                                                                                                                                 |
+| `absolute`                  | Calculates the absolute of a given float.                                                                                                                                                 |
 
 ## Tests
 
