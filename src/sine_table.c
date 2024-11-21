@@ -1,3 +1,5 @@
+#include "sine_table.h"
+
 const float sine_table[] = {
     0.0f,
     0.006159946638138647f,
