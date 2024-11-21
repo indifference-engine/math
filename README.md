@@ -50,6 +50,13 @@ corresponding function available.
 | `clamp`                     | Clamps a value to between an upper and lower bound.                                                                                                                                       |
 | `interpolate_linearly`      | Linearly interpolates between two values.                                                                                                                                                 |
 | `absolute`                  | Calculates the absolute of a given float.                                                                                                                                                 |
+| `cross_product`             | Calculates the cross product of two 3D vectors.                                                                                                                                           |
+| `dot_product`               | Calculates the dot product of two 3D vectors.                                                                                                                                             |
+| `inverse_cosine`            | Calculates the angle of a given cosine.                                                                                                                                                   |
+| `inverse_sine`              | Calculates the angle of a given sine.                                                                                                                                                     |
+| `inverse_square_root`       | Calculates the approximate inverse square root of a float.                                                                                                                                |
+| `normalize`                 | Approximately normalizes the length of a 3D vector (producing a unit vector).                                                                                                             |
+| `square_root`               | Calculates the approximate square root of a float.                                                                                                                                        |
 
 ## Tests
 
