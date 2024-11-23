@@ -57,6 +57,7 @@ corresponding function available.
 | `inverse_square_root`       | Calculates the approximate inverse square root of a float.                                                                                                                                |
 | `normalize`                 | Approximately normalizes the length of a 3D vector (producing a unit vector).                                                                                                             |
 | `square_root`               | Calculates the approximate square root of a float.                                                                                                                                        |
+| `look_at`                   | Calculates a 4x4 model matrix positioned at a location to "look" from, orienting X+ towards a location to "look" at, and its inverse.                                                     |
 
 ## Tests
 
