@@ -23,13 +23,13 @@
  * @param to_z The Z axis of the location to "look" at, in world space.
  *             Behavior is undefined if NaN, infinity or negative infinity, or
  *             coincident with the location to "look" from.
- * @param z_x The X axis of the normal along which to align the Z+ axis.
+ * @param y_x The X axis of the normal along which to align the Y+ axis.
  *            Behavior is undefined if NaN, aligned with from -> to or not unit
  *            length.
- * @param z_y The Y axis of the normal along which to align the Z+ axis.
+ * @param y_y The Y axis of the normal along which to align the Y+ axis.
  *            Behavior is undefined if NaN, aligned with from -> to or not unit
  *            length.
- * @param z_z The Z axis of the normal along which to align the Z+ axis.
+ * @param y_z The Z axis of the normal along which to align the Y+ axis.
  *            Behavior is undefined if NaN, aligned with from -> to or not unit
  *            length.
  * @param proximal_forward The 4x4 matrix to which to write the result for the
