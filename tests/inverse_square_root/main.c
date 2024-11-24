@@ -7,7 +7,7 @@ static void given(const float value, const float expected)
 {
   const float actual = inverse_square_root(value);
 
-  if (actual != actual || actual > expected + 0.25f || actual < expected - 0.25f)
+  if (actual != actual || actual > expected + 0.0075f || actual < expected - 0.0075f)
   {
     printf("FAIL inverse_square_root(%f) = %f (expected %f)\n", value, actual, expected);
     exit_code = 1;

@@ -15,5 +15,5 @@ float inverse_square_root(const float value)
 
   conversion.as_uint32_t = 1597463174 - (conversion.as_uint32_t >> 1);
 
-  return conversion.as_float;
+  return conversion.as_float * (1.5f - 0.5f * value * conversion.as_float * conversion.as_float);
 }

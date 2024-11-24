@@ -27,19 +27,21 @@ static void given(const float vector_x, const float vector_y, const float vector
     exit_code = 1;
   }
 
-  if (unshared_normal[0] != unshared_normal[0] || normal_x > unshared_normal[0] + 0.025f || normal_x < unshared_normal[0] - 0.025f)
+  const float tolerance = 0.001f;
+
+  if (unshared_normal[0] != unshared_normal[0] || normal_x > unshared_normal[0] + tolerance || normal_x < unshared_normal[0] - tolerance)
   {
     printf("Expected normal X %f, actual %f.\n", normal_x, unshared_normal[0]);
     exit_code = 1;
   }
 
-  if (unshared_normal[1] != unshared_normal[1] || normal_y > unshared_normal[1] + 0.025f || normal_y < unshared_normal[1] - 0.025f)
+  if (unshared_normal[1] != unshared_normal[1] || normal_y > unshared_normal[1] + tolerance || normal_y < unshared_normal[1] - tolerance)
   {
     printf("Expected normal Y %f, actual %f.\n", normal_y, unshared_normal[1]);
     exit_code = 1;
   }
 
-  if (unshared_normal[2] != unshared_normal[2] || normal_z > unshared_normal[2] + 0.025f || normal_z < unshared_normal[2] - 0.025f)
+  if (unshared_normal[2] != unshared_normal[2] || normal_z > unshared_normal[2] + tolerance || normal_z < unshared_normal[2] - tolerance)
   {
     printf("Expected normal Z %f, actual %f.\n", normal_z, unshared_normal[2]);
     exit_code = 1;
@@ -49,19 +51,19 @@ static void given(const float vector_x, const float vector_y, const float vector
 
   normalize(shared, shared);
 
-  if (shared[0] != shared[0] || normal_x > shared[0] + 0.025f || normal_x < shared[0] - 0.025f)
+  if (shared[0] != shared[0] || normal_x > shared[0] + tolerance || normal_x < shared[0] - tolerance)
   {
     printf("Expected normal X %f, actual %f.\n", normal_x, shared[0]);
     exit_code = 1;
   }
 
-  if (shared[1] != shared[1] || normal_y > shared[1] + 0.025f || normal_y < shared[1] - 0.025f)
+  if (shared[1] != shared[1] || normal_y > shared[1] + tolerance || normal_y < shared[1] - tolerance)
   {
     printf("Expected normal Y %f, actual %f.\n", normal_y, shared[1]);
     exit_code = 1;
   }
 
-  if (shared[2] != shared[2] || normal_z > shared[2] + 0.025f || normal_z < shared[2] - 0.025f)
+  if (shared[2] != shared[2] || normal_z > shared[2] + tolerance || normal_z < shared[2] - tolerance)
   {
     printf("Expected normal Z %f, actual %f.\n", normal_z, shared[2]);
     exit_code = 1;

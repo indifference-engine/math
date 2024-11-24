@@ -12,7 +12,7 @@ static void check(
 {
   const float actual_value = actual[index];
 
-  if (actual_value != actual_value || expected < actual_value - 0.05f || expected > actual_value + 0.05f)
+  if (actual_value != actual_value || expected < actual_value - 0.0025f || expected > actual_value + 0.0025f)
   {
     printf("FAIL %s %s %d expected %f actual %f\n", description_a, description_b, index, expected, actual[index]);
     exit_code = 1;
