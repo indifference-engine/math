@@ -8,6 +8,6 @@
  * @param b The second float to compare.  Behavior is undefined if NaN.
  * @return The greater of the two given floats.
  */
-float max(const float a, const float b);
+float greater(const float a, const float b);
 
 #endif

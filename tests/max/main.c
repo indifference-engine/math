@@ -1,15 +1,15 @@
 #include <stdio.h>
-#include "../../src/max.h"
+#include "../../src/greater.h"
 
 static int exit_code = 0;
 
 static void given(const float a, const float b, const float expected)
 {
-  const float actual = max(a, b);
+  const float actual = greater(a, b);
 
   if (actual != expected)
   {
-    printf("FAIL max(%f, %f) = %f (expected %f)\n", a, b, actual, expected);
+    printf("FAIL greater(%f, %f) = %f (expected %f)\n", a, b, actual, expected);
     exit_code = 1;
   }
 }

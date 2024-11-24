@@ -1,5 +1,5 @@
 #include "jointed_look_at.h"
-#include "min.h"
+#include "lesser.h"
 #include "inverse_square_root.h"
 #include "square_root.h"
 
@@ -25,7 +25,7 @@ void jointed_look_at(
 
   const float half_delta_magnitude_squared = half_delta_x * half_delta_x + half_delta_y * half_delta_y + half_delta_z * half_delta_z;
   const float length_squared = length * length * 0.25f;
-  const float capped_half_delta_magnitude_squared = min(half_delta_magnitude_squared, length_squared);
+  const float capped_half_delta_magnitude_squared = lesser(half_delta_magnitude_squared, length_squared);
   const float bend = square_root(length_squared - capped_half_delta_magnitude_squared);
 
   const float half_delta_inverse_magnitude = inverse_square_root(half_delta_magnitude_squared);
