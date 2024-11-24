@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include "square_root.h"
+#include "inverse_square_root.h"
 
 float inverse_square_root(const float value)
 {
