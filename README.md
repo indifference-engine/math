@@ -61,6 +61,7 @@ corresponding function available.
 | `jointed_look_at_3`          | Calculates 4x4 model matrices which place proximal and distal halves of a limb to fill a span between a location to "look" from and a location to "look" to, and its inverse.  The bend is aligned with the Z+ axis. |
 | `copy_3`                     | Copies a 3D vector.                                                                                                                                                                                                  |
 | `interpolate_linearly_3_3_1` | Linearly interpolates between two 3D vectors.                                                                                                                                                                        |
+| `subtract_3_3`               | Subtracts a 3D vector from another 3D vector.                                                                                                                                                                        |
 
 ## Tests
 

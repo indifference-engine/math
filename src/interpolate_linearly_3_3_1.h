@@ -12,7 +12,7 @@
  *                      range.  Behavior is undefined if NaN, infinity or
  *                      negative infinity.
  * @param output The 3D vector to write the resulting linearly interpolated 3D
- *               vector to.  May overlap with the input vector.
+ *               vector to.  May overlap with the input vectors.
  */
 void interpolate_linearly_3_3_1(const float *const from, const float *const to,
                                 const float unit_interval, float *const output);
