@@ -45,23 +45,26 @@ static void given(const float from_x, const float from_y, const float from_z,
   }
 
   if (unshared[0] != expected_x) {
-    printf("FAIL interpolate_linearly_3([%f, x, x], [%f, x, x], %f) = [%f, x, "
-           "x] (expected %f)\n",
-           from_x, to_x, unit_interval, unshared[0], expected_x);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([%f, x, x], [%f, x, x], %f) = [%f, x, "
+        "x] (expected %f)\n",
+        from_x, to_x, unit_interval, unshared[0], expected_x);
     exit_code = 1;
   }
 
   if (unshared[1] != expected_y) {
-    printf("FAIL interpolate_linearly_3([x, %f, x], [x, %f, x], %f) = [x, %f, "
-           "x] (expected %f)\n",
-           from_y, to_y, unit_interval, unshared[1], expected_y);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([x, %f, x], [x, %f, x], %f) = [x, %f, "
+        "x] (expected %f)\n",
+        from_y, to_y, unit_interval, unshared[1], expected_y);
     exit_code = 1;
   }
 
   if (unshared[2] != expected_z) {
-    printf("FAIL interpolate_linearly_3([x, x, %f], [x, x, %f], %f) = [x, x, "
-           "%f] (expected %f)\n",
-           from_z, to_z, unit_interval, unshared[2], expected_z);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([x, x, %f], [x, x, %f], %f) = [x, x, "
+        "%f] (expected %f)\n",
+        from_z, to_z, unit_interval, unshared[2], expected_z);
     exit_code = 1;
   }
 
@@ -87,23 +90,26 @@ static void given(const float from_x, const float from_y, const float from_z,
   }
 
   if (shared_from_from[0] != expected_x) {
-    printf("FAIL interpolate_linearly_3([%f, x, x], [%f, x, x], %f) = [%f, x, "
-           "x] (expected %f)\n",
-           from_x, to_x, unit_interval, shared_from_from[0], expected_x);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([%f, x, x], [%f, x, x], %f) = [%f, x, "
+        "x] (expected %f)\n",
+        from_x, to_x, unit_interval, shared_from_from[0], expected_x);
     exit_code = 1;
   }
 
   if (shared_from_from[1] != expected_y) {
-    printf("FAIL interpolate_linearly_3([x, %f, x], [x, %f, x], %f) = [x, %f, "
-           "x] (expected %f)\n",
-           from_y, to_y, unit_interval, shared_from_from[1], expected_y);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([x, %f, x], [x, %f, x], %f) = [x, %f, "
+        "x] (expected %f)\n",
+        from_y, to_y, unit_interval, shared_from_from[1], expected_y);
     exit_code = 1;
   }
 
   if (shared_from_from[2] != expected_z) {
-    printf("FAIL interpolate_linearly_3([x, x, %f], [x, x, %f], %f) = [x, x, "
-           "%f] (expected %f)\n",
-           from_z, to_z, unit_interval, shared_from_from[2], expected_z);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([x, x, %f], [x, x, %f], %f) = [x, x, "
+        "%f] (expected %f)\n",
+        from_z, to_z, unit_interval, shared_from_from[2], expected_z);
     exit_code = 1;
   }
 
@@ -129,23 +135,26 @@ static void given(const float from_x, const float from_y, const float from_z,
   }
 
   if (shared_to_to[0] != expected_x) {
-    printf("FAIL interpolate_linearly_3([%f, x, x], [%f, x, x], %f) = [%f, x, "
-           "x] (expected %f)\n",
-           from_x, to_x, unit_interval, shared_to_to[0], expected_x);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([%f, x, x], [%f, x, x], %f) = [%f, x, "
+        "x] (expected %f)\n",
+        from_x, to_x, unit_interval, shared_to_to[0], expected_x);
     exit_code = 1;
   }
 
   if (shared_to_to[1] != expected_y) {
-    printf("FAIL interpolate_linearly_3([x, %f, x], [x, %f, x], %f) = [x, %f, "
-           "x] (expected %f)\n",
-           from_y, to_y, unit_interval, shared_to_to[1], expected_y);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([x, %f, x], [x, %f, x], %f) = [x, %f, "
+        "x] (expected %f)\n",
+        from_y, to_y, unit_interval, shared_to_to[1], expected_y);
     exit_code = 1;
   }
 
   if (shared_to_to[2] != expected_z) {
-    printf("FAIL interpolate_linearly_3([x, x, %f], [x, x, %f], %f) = [x, x, "
-           "%f] (expected %f)\n",
-           from_z, to_z, unit_interval, shared_to_to[2], expected_z);
+    printf(
+        "FAIL interpolate_linearly_3_3_1([x, x, %f], [x, x, %f], %f) = [x, x, "
+        "%f] (expected %f)\n",
+        from_z, to_z, unit_interval, shared_to_to[2], expected_z);
     exit_code = 1;
   }
 }
