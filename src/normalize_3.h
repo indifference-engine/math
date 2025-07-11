@@ -1,6 +1,6 @@
-#ifndef NORMALIZE_H
+#ifndef NORMALIZE_3_H
 
-#define NORMALIZE_H
+#define NORMALIZE_3_H
 
 /**
  * Approximately normalizes the length of a 3D vector (producing a unit vector).
@@ -10,6 +10,6 @@
  * @param normal The 3D vector to write the resulting approximate unit vector
  *               to.  May overlap with the input vector.
  */
-void normalize(const float *const vector, float *const normal);
+void normalize_3(const float *const vector, float *const normal);
 
 #endif

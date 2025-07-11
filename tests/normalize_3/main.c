@@ -1,4 +1,4 @@
-#include "../../src/normalize.h"
+#include "../../src/normalize_3.h"
 #include <stdio.h>
 
 static int exit_code = 0;
@@ -8,7 +8,7 @@ static void given(const float vector_x, const float vector_y,
                   const float normal_y, const float normal_z) {
   const float unshared_vector[3] = {vector_x, vector_y, vector_z};
   float unshared_normal[3] = {1.2f, -3.4f, -5.6f};
-  normalize(unshared_vector, unshared_normal);
+  normalize_3(unshared_vector, unshared_normal);
 
   if (unshared_vector[0] != vector_x) {
     printf("Vector X changed unexpectedly.\n");
@@ -50,7 +50,7 @@ static void given(const float vector_x, const float vector_y,
 
   float shared[3] = {vector_x, vector_y, vector_z};
 
-  normalize(shared, shared);
+  normalize_3(shared, shared);
 
   if (shared[0] != shared[0] || normal_x > shared[0] + tolerance ||
       normal_x < shared[0] - tolerance) {
