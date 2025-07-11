@@ -1,21 +1,20 @@
-#include <stdio.h>
 #include "../../src/inverse_sine.h"
+#include <stdio.h>
 
 static int exit_code = 0;
 
-static void given(const float sine, const float expected)
-{
+static void given(const float sine, const float expected) {
   const float actual = inverse_sine(sine);
 
-  if (actual != actual || actual > expected + 0.0025f || actual < expected - 0.0025f)
-  {
-    printf("FAIL inverse_sine(%f) = %f (expected %f)\n", sine, actual, expected);
+  if (actual != actual || actual > expected + 0.0025f ||
+      actual < expected - 0.0025f) {
+    printf("FAIL inverse_sine(%f) = %f (expected %f)\n", sine, actual,
+           expected);
     exit_code = 1;
   }
 }
 
-int main(const int argc, const char *const *const argv)
-{
+int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 
@@ -33,13 +32,12 @@ int main(const int argc, const char *const *const argv)
   float previous = inverse_sine(previous_sine);
   float sine, next;
 
-  for (sine = previous_sine + 0.0001f; sine <= 1.0f; sine += 0.0001f)
-  {
+  for (sine = previous_sine + 0.0001f; sine <= 1.0f; sine += 0.0001f) {
     next = inverse_sine(sine);
 
-    if (next != next || next <= previous)
-    {
-      printf("FAIL A %f -> %f = %f -> %f\n", previous_sine, sine, previous, next);
+    if (next != next || next <= previous) {
+      printf("FAIL A %f -> %f = %f -> %f\n", previous_sine, sine, previous,
+             next);
       exit_code = 1;
     }
 

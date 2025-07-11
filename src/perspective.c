@@ -1,24 +1,20 @@
 #include "perspective.h"
 
-void perspective(
-    const float height,
-    const float width,
-    const float focal_length,
-    const float shift_y,
-    const float shift_x,
-    const float clip_start,
-    const float clip_end,
-    const float sensor_size,
-    float *const forward,
-    float *const inverse)
-{
+void perspective(const float height, const float width,
+                 const float focal_length, const float shift_y,
+                 const float shift_x, const float clip_start,
+                 const float clip_end, const float sensor_size,
+                 float *const forward, float *const inverse) {
   const float greatest_dimension = width > height ? width : height;
   const float width_reciprocal = 1.0f / width;
   const float height_reciprocal = 1.0f / height;
-  const float greatest_dimension_reciprocal = width_reciprocal > height_reciprocal ? height_reciprocal : width_reciprocal;
+  const float greatest_dimension_reciprocal =
+      width_reciprocal > height_reciprocal ? height_reciprocal
+                                           : width_reciprocal;
   const float double_greatest_dimension = greatest_dimension * 2.0f;
   const float focal_length_reciprocal = 1.0f / focal_length;
-  const float b = sensor_size * focal_length_reciprocal * greatest_dimension_reciprocal;
+  const float b =
+      sensor_size * focal_length_reciprocal * greatest_dimension_reciprocal;
   const float half_b = 0.5f * b;
   const float half_b_reciprocal = 1.0f / half_b;
   const float c = clip_start - clip_end;

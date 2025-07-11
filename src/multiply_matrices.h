@@ -11,9 +11,7 @@
  * @param product The 4x4 matrix to which to write the result.  May be
  *                "multiplier", "multiplicand" or both.
  */
-void multiply_matrices(
-    const float *const multiplier,
-    const float *const multiplicand,
-    float *const product);
+void multiply_matrices(const float *const multiplier,
+                       const float *const multiplicand, float *const product);
 
 #endif

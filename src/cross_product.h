@@ -11,9 +11,7 @@
  * @param product The 3D vector to write the resulting cross product to.  May
  *                overlap with the multiplier and/or multiplicand.
  */
-void cross_product(
-    const float *const multiplier,
-    const float *const multiplicand,
-    float *const product);
+void cross_product(const float *const multiplier,
+                   const float *const multiplicand, float *const product);
 
 #endif

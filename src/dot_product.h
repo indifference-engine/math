@@ -10,8 +10,7 @@
  *                     if any component is NaN, infinity or negative infinity.
  * @return product The resulting dot product.
  */
-float dot_product(
-    const float *const multiplier,
-    const float *const multiplicand);
+float dot_product(const float *const multiplier,
+                  const float *const multiplicand);
 
 #endif

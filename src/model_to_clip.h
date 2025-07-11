@@ -16,9 +16,7 @@
  *             space when not culled, otherwise unmodified.  May be "model".
  * @return The culling which occurred, if any (see CULLED_BY_*).
  */
-int model_to_clip(
-    const float *const model,
-    const float *const model_view_projection,
-    float *const clip);
+int model_to_clip(const float *const model,
+                  const float *const model_view_projection, float *const clip);
 
 #endif

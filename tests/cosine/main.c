@@ -1,21 +1,19 @@
-#include <stdio.h>
 #include "../../src/cosine.h"
+#include <stdio.h>
 
 static int exit_code = 0;
 
-static void given(const float radians, const float expected)
-{
+static void given(const float radians, const float expected) {
   const float actual = cosine(radians);
 
-  if (actual != actual || actual > expected + 0.0025f || actual < expected - 0.0025f)
-  {
+  if (actual != actual || actual > expected + 0.0025f ||
+      actual < expected - 0.0025f) {
     printf("FAIL cosine(%f) = %f (expected %f)\n", radians, actual, expected);
     exit_code = 1;
   }
 }
 
-int main(const int argc, const char *const *const argv)
-{
+int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 
@@ -79,13 +77,14 @@ int main(const int argc, const char *const *const argv)
   float previous = cosine(previous_radians);
   float next_radians, next;
 
-  for (next_radians = previous_radians + 0.0001f; next_radians <= -6.283185307179586476925286766559f; next_radians += 0.0001f)
-  {
+  for (next_radians = previous_radians + 0.0001f;
+       next_radians <= -6.283185307179586476925286766559f;
+       next_radians += 0.0001f) {
     next = cosine(next_radians);
 
-    if (next != next || next <= previous)
-    {
-      printf("FAIL A %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+    if (next != next || next <= previous) {
+      printf("FAIL A %f -> %f = %f -> %f\n", previous_radians, next_radians,
+             previous, next);
       exit_code = 1;
     }
 
@@ -96,22 +95,23 @@ int main(const int argc, const char *const *const argv)
   next_radians = -6.283185307179586476925286766559f;
   next = cosine(next_radians);
 
-  if (next != next || next < previous)
-  {
-    printf("FAIL B %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+  if (next != next || next < previous) {
+    printf("FAIL B %f -> %f = %f -> %f\n", previous_radians, next_radians,
+           previous, next);
     exit_code = 1;
   }
 
   previous_radians = next_radians;
   previous = next;
 
-  for (next_radians = previous_radians + 0.0001f; next_radians <= -3.1415926535897932384626433832795f; next_radians += 0.0001f)
-  {
+  for (next_radians = previous_radians + 0.0001f;
+       next_radians <= -3.1415926535897932384626433832795f;
+       next_radians += 0.0001f) {
     next = cosine(next_radians);
 
-    if (next != next || next >= previous)
-    {
-      printf("FAIL C %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+    if (next != next || next >= previous) {
+      printf("FAIL C %f -> %f = %f -> %f\n", previous_radians, next_radians,
+             previous, next);
       exit_code = 1;
     }
 
@@ -122,22 +122,22 @@ int main(const int argc, const char *const *const argv)
   next_radians = -3.1415926535897932384626433832795f;
   next = cosine(next_radians);
 
-  if (next != next || next > previous)
-  {
-    printf("FAIL D %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+  if (next != next || next > previous) {
+    printf("FAIL D %f -> %f = %f -> %f\n", previous_radians, next_radians,
+           previous, next);
     exit_code = 1;
   }
 
   previous_radians = next_radians;
   previous = next;
 
-  for (next_radians = previous_radians + 0.0001f; next_radians <= 0.0f; next_radians += 0.0001f)
-  {
+  for (next_radians = previous_radians + 0.0001f; next_radians <= 0.0f;
+       next_radians += 0.0001f) {
     next = cosine(next_radians);
 
-    if (next != next || next <= previous)
-    {
-      printf("FAIL E %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+    if (next != next || next <= previous) {
+      printf("FAIL E %f -> %f = %f -> %f\n", previous_radians, next_radians,
+             previous, next);
       exit_code = 1;
     }
 
@@ -148,22 +148,23 @@ int main(const int argc, const char *const *const argv)
   next_radians = 0.0f;
   next = cosine(next_radians);
 
-  if (next != next || next < previous)
-  {
-    printf("FAIL F %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+  if (next != next || next < previous) {
+    printf("FAIL F %f -> %f = %f -> %f\n", previous_radians, next_radians,
+           previous, next);
     exit_code = 1;
   }
 
   previous_radians = next_radians;
   previous = next;
 
-  for (next_radians = previous_radians + 0.0001f; next_radians <= 3.1415926535897932384626433832795f; next_radians += 0.0001f)
-  {
+  for (next_radians = previous_radians + 0.0001f;
+       next_radians <= 3.1415926535897932384626433832795f;
+       next_radians += 0.0001f) {
     next = cosine(next_radians);
 
-    if (next != next || next >= previous)
-    {
-      printf("FAIL G %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+    if (next != next || next >= previous) {
+      printf("FAIL G %f -> %f = %f -> %f\n", previous_radians, next_radians,
+             previous, next);
       exit_code = 1;
     }
 
@@ -174,22 +175,23 @@ int main(const int argc, const char *const *const argv)
   next_radians = 3.1415926535897932384626433832795f;
   next = cosine(next_radians);
 
-  if (next != next || next > previous)
-  {
-    printf("FAIL H %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+  if (next != next || next > previous) {
+    printf("FAIL H %f -> %f = %f -> %f\n", previous_radians, next_radians,
+           previous, next);
     exit_code = 1;
   }
 
   previous_radians = next_radians;
   previous = next;
 
-  for (next_radians = previous_radians + 0.0001f; next_radians <= 6.283185307179586476925286766559f; next_radians += 0.0001f)
-  {
+  for (next_radians = previous_radians + 0.0001f;
+       next_radians <= 6.283185307179586476925286766559f;
+       next_radians += 0.0001f) {
     next = cosine(next_radians);
 
-    if (next != next || next <= previous)
-    {
-      printf("FAIL I %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+    if (next != next || next <= previous) {
+      printf("FAIL I %f -> %f = %f -> %f\n", previous_radians, next_radians,
+             previous, next);
       exit_code = 1;
     }
 
@@ -200,22 +202,23 @@ int main(const int argc, const char *const *const argv)
   next_radians = 6.283185307179586476925286766559f;
   next = cosine(next_radians);
 
-  if (next != next || next < previous)
-  {
-    printf("FAIL J %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+  if (next != next || next < previous) {
+    printf("FAIL J %f -> %f = %f -> %f\n", previous_radians, next_radians,
+           previous, next);
     exit_code = 1;
   }
 
   previous_radians = next_radians;
   previous = next;
 
-  for (next_radians = previous_radians + 0.0001f; next_radians <= 7.8539816339744830961566084581988f; next_radians += 0.0001f)
-  {
+  for (next_radians = previous_radians + 0.0001f;
+       next_radians <= 7.8539816339744830961566084581988f;
+       next_radians += 0.0001f) {
     next = cosine(next_radians);
 
-    if (next != next || next >= previous)
-    {
-      printf("FAIL K %f -> %f = %f -> %f\n", previous_radians, next_radians, previous, next);
+    if (next != next || next >= previous) {
+      printf("FAIL K %f -> %f = %f -> %f\n", previous_radians, next_radians,
+             previous, next);
       exit_code = 1;
     }
 

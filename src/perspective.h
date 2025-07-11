@@ -28,16 +28,10 @@
  * @param forward The 4x4 matrix to which to write the result.
  * @param inverse The 4x4 matrix to which to write the inverse of the result.
  */
-void perspective(
-    const float height,
-    const float width,
-    const float focal_length,
-    const float shift_y,
-    const float shift_x,
-    const float clip_start,
-    const float clip_end,
-    const float sensor_size,
-    float *const forward,
-    float *const inverse);
+void perspective(const float height, const float width,
+                 const float focal_length, const float shift_y,
+                 const float shift_x, const float clip_start,
+                 const float clip_end, const float sensor_size,
+                 float *const forward, float *const inverse);
 
 #endif

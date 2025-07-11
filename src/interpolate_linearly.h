@@ -13,6 +13,7 @@
  *                      negative infinity.
  * @return The linearly interpolated value.
  */
-float interpolate_linearly(const float from, const float to, const float unit_interval);
+float interpolate_linearly(const float from, const float to,
+                           const float unit_interval);
 
 #endif

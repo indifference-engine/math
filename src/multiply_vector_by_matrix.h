@@ -13,9 +13,8 @@
  * @param product Overwritten with the multiplied 3-dimensional vector.  May be
  *                "multiplier".
  */
-void multiply_vector_by_matrix(
-    const float *const multiplier,
-    const float *const multiplicand,
-    float *const product);
+void multiply_vector_by_matrix(const float *const multiplier,
+                               const float *const multiplicand,
+                               float *const product);
 
 #endif

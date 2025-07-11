@@ -1,20 +1,12 @@
 #include "model.h"
-#include "sine.h"
 #include "cosine.h"
+#include "sine.h"
 
-void model(
-    const float location_x,
-    const float location_y,
-    const float location_z,
-    const float rotation_x,
-    const float rotation_y,
-    const float rotation_z,
-    const float scale_x,
-    const float scale_y,
-    const float scale_z,
-    float *const forward,
-    float *const inverse)
-{
+void model(const float location_x, const float location_y,
+           const float location_z, const float rotation_x,
+           const float rotation_y, const float rotation_z, const float scale_x,
+           const float scale_y, const float scale_z, float *const forward,
+           float *const inverse) {
   const float scale_x_reciprocal = 1 / scale_x;
   const float scale_y_reciprocal = 1 / scale_y;
   const float scale_z_reciprocal = 1 / scale_z;

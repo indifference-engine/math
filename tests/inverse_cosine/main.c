@@ -1,21 +1,20 @@
-#include <stdio.h>
 #include "../../src/inverse_cosine.h"
+#include <stdio.h>
 
 static int exit_code = 0;
 
-static void given(const float cosine, const float expected)
-{
+static void given(const float cosine, const float expected) {
   const float actual = inverse_cosine(cosine);
 
-  if (actual != actual || actual > expected + 0.0025f || actual < expected - 0.0025f)
-  {
-    printf("FAIL inverse_cosine(%f) = %f (expected %f)\n", cosine, actual, expected);
+  if (actual != actual || actual > expected + 0.0025f ||
+      actual < expected - 0.0025f) {
+    printf("FAIL inverse_cosine(%f) = %f (expected %f)\n", cosine, actual,
+           expected);
     exit_code = 1;
   }
 }
 
-int main(const int argc, const char *const *const argv)
-{
+int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 
@@ -33,13 +32,12 @@ int main(const int argc, const char *const *const argv)
   float previous = inverse_cosine(previous_cosine);
   float cosine, next;
 
-  for (cosine = previous_cosine + 0.0001f; cosine <= 1.0f; cosine += 0.0001f)
-  {
+  for (cosine = previous_cosine + 0.0001f; cosine <= 1.0f; cosine += 0.0001f) {
     next = inverse_cosine(cosine);
 
-    if (next != next || next >= previous)
-    {
-      printf("FAIL A %f -> %f = %f -> %f\n", previous_cosine, cosine, previous, next);
+    if (next != next || next >= previous) {
+      printf("FAIL A %f -> %f = %f -> %f\n", previous_cosine, cosine, previous,
+             next);
       exit_code = 1;
     }
 

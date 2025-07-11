@@ -1,21 +1,20 @@
-#include <stdio.h>
 #include "../../src/square_root.h"
+#include <stdio.h>
 
 static int exit_code = 0;
 
-static void given(const float value, const float expected)
-{
+static void given(const float value, const float expected) {
   const float actual = square_root(value);
 
-  if (actual != actual || actual > expected + 0.1f || actual < expected - 0.1f)
-  {
-    printf("FAIL square_root(%f) = %f (expected %f)\n", value, actual, expected);
+  if (actual != actual || actual > expected + 0.1f ||
+      actual < expected - 0.1f) {
+    printf("FAIL square_root(%f) = %f (expected %f)\n", value, actual,
+           expected);
     exit_code = 1;
   }
 }
 
-int main(const int argc, const char *const *const argv)
-{
+int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 

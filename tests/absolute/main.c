@@ -1,23 +1,20 @@
-#include <stdio.h>
 #include "../../src/absolute.h"
 #include "../../src/negative_infinity.h"
 #include "../../src/positive_infinity.h"
+#include <stdio.h>
 
 static int exit_code = 0;
 
-static void given(const float value, const float expected)
-{
+static void given(const float value, const float expected) {
   const float actual = absolute(value);
 
-  if (actual != expected)
-  {
+  if (actual != expected) {
     printf("FAIL absolute(%f) = %f (expected %f)\n", value, actual, expected);
     exit_code = 1;
   }
 }
 
-int main(const int argc, const char *const *const argv)
-{
+int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 

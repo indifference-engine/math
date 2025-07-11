@@ -1,21 +1,18 @@
-#include <stdio.h>
 #include "../../src/lesser.h"
+#include <stdio.h>
 
 static int exit_code = 0;
 
-static void given(const float a, const float b, const float expected)
-{
+static void given(const float a, const float b, const float expected) {
   const float actual = lesser(a, b);
 
-  if (actual != expected)
-  {
+  if (actual != expected) {
     printf("FAIL lesser(%f, %f) = %f (expected %f)\n", a, b, actual, expected);
     exit_code = 1;
   }
 }
 
-int main(const int argc, const char *const *const argv)
-{
+int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 

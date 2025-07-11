@@ -1,21 +1,20 @@
-#include <stdio.h>
 #include "../../src/interpolate_linearly.h"
+#include <stdio.h>
 
 static int exit_code = 0;
 
-static void given(const float value, const float lower, const float upper, const float expected)
-{
+static void given(const float value, const float lower, const float upper,
+                  const float expected) {
   const float actual = interpolate_linearly(value, lower, upper);
 
-  if (actual != expected)
-  {
-    printf("FAIL interpolate_linearly(%f, %f, %f) = %f (expected %f)\n", value, lower, upper, actual, expected);
+  if (actual != expected) {
+    printf("FAIL interpolate_linearly(%f, %f, %f) = %f (expected %f)\n", value,
+           lower, upper, actual, expected);
     exit_code = 1;
   }
 }
 
-int main(const int argc, const char *const *const argv)
-{
+int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 

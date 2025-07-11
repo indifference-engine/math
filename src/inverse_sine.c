@@ -1,19 +1,14 @@
 #include "inverse_sine.h"
 #include "inverse_sine_table.h"
 
-float inverse_sine(const float sine)
-{
-  if (sine >= 0.0f)
-  {
+float inverse_sine(const float sine) {
+  if (sine >= 0.0f) {
     const float pre_multiplied = sine * 255.0f;
     int index = pre_multiplied;
 
-    if (index < 0)
-    {
+    if (index < 0) {
       index = 0;
-    }
-    else if (index > 254)
-    {
+    } else if (index > 254) {
       index = 254;
     }
 
@@ -23,18 +18,13 @@ float inverse_sine(const float sine)
     const float next = inverse_sine_table[index + 1];
 
     return previous + (next - previous) * remainder;
-  }
-  else
-  {
+  } else {
     const float pre_multiplied = sine * -255.0f;
     int index = pre_multiplied;
 
-    if (index < 0)
-    {
+    if (index < 0) {
       index = 0;
-    }
-    else if (index > 254)
-    {
+    } else if (index > 254) {
       index = 254;
     }
 

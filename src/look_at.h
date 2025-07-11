@@ -32,17 +32,9 @@
  * @param forward The 4x4 matrix to which to write the result.
  * @param inverse The 4x4 matrix to which to write the inverse of result.
  */
-void look_at(
-    const float from_x,
-    const float from_y,
-    const float from_z,
-    const float to_x,
-    const float to_y,
-    const float to_z,
-    const float y_x,
-    const float y_y,
-    const float y_z,
-    float *const forward,
-    float *const inverse);
+void look_at(const float from_x, const float from_y, const float from_z,
+             const float to_x, const float to_y, const float to_z,
+             const float y_x, const float y_y, const float y_z,
+             float *const forward, float *const inverse);
 
 #endif

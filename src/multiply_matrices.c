@@ -1,10 +1,7 @@
 #include "multiply_matrices.h"
 
-void multiply_matrices(
-    const float *const multiplier,
-    const float *const multiplicand,
-    float *const product)
-{
+void multiply_matrices(const float *const multiplier,
+                       const float *const multiplicand, float *const product) {
   const float multiplier_0 = multiplier[0];
   const float multiplier_1 = multiplier[1];
   const float multiplier_2 = multiplier[2];
@@ -39,20 +36,42 @@ void multiply_matrices(
   const float multiplicand_14 = multiplicand[14];
   const float multiplicand_15 = multiplicand[15];
 
-  product[0] = multiplicand_0 * multiplier_0 + multiplicand_4 * multiplier_1 + multiplicand_8 * multiplier_2 + multiplicand_12 * multiplier_3;
-  product[1] = multiplicand_1 * multiplier_0 + multiplicand_5 * multiplier_1 + multiplicand_9 * multiplier_2 + multiplicand_13 * multiplier_3;
-  product[2] = multiplicand_2 * multiplier_0 + multiplicand_6 * multiplier_1 + multiplicand_10 * multiplier_2 + multiplicand_14 * multiplier_3;
-  product[3] = multiplicand_3 * multiplier_0 + multiplicand_7 * multiplier_1 + multiplicand_11 * multiplier_2 + multiplicand_15 * multiplier_3;
-  product[4] = multiplicand_0 * multiplier_4 + multiplicand_4 * multiplier_5 + multiplicand_8 * multiplier_6 + multiplicand_12 * multiplier_7;
-  product[5] = multiplicand_1 * multiplier_4 + multiplicand_5 * multiplier_5 + multiplicand_9 * multiplier_6 + multiplicand_13 * multiplier_7;
-  product[6] = multiplicand_2 * multiplier_4 + multiplicand_6 * multiplier_5 + multiplicand_10 * multiplier_6 + multiplicand_14 * multiplier_7;
-  product[7] = multiplicand_3 * multiplier_4 + multiplicand_7 * multiplier_5 + multiplicand_11 * multiplier_6 + multiplicand_15 * multiplier_7;
-  product[8] = multiplicand_0 * multiplier_8 + multiplicand_4 * multiplier_9 + multiplicand_8 * multiplier_10 + multiplicand_12 * multiplier_11;
-  product[9] = multiplicand_1 * multiplier_8 + multiplicand_5 * multiplier_9 + multiplicand_9 * multiplier_10 + multiplicand_13 * multiplier_11;
-  product[10] = multiplicand_2 * multiplier_8 + multiplicand_6 * multiplier_9 + multiplicand_10 * multiplier_10 + multiplicand_14 * multiplier_11;
-  product[11] = multiplicand_3 * multiplier_8 + multiplicand_7 * multiplier_9 + multiplicand_11 * multiplier_10 + multiplicand_15 * multiplier_11;
-  product[12] = multiplicand_0 * multiplier_12 + multiplicand_4 * multiplier_13 + multiplicand_8 * multiplier_14 + multiplicand_12 * multiplier_15;
-  product[13] = multiplicand_1 * multiplier_12 + multiplicand_5 * multiplier_13 + multiplicand_9 * multiplier_14 + multiplicand_13 * multiplier_15;
-  product[14] = multiplicand_2 * multiplier_12 + multiplicand_6 * multiplier_13 + multiplicand_10 * multiplier_14 + multiplicand_14 * multiplier_15;
-  product[15] = multiplicand_3 * multiplier_12 + multiplicand_7 * multiplier_13 + multiplicand_11 * multiplier_14 + multiplicand_15 * multiplier_15;
+  product[0] = multiplicand_0 * multiplier_0 + multiplicand_4 * multiplier_1 +
+               multiplicand_8 * multiplier_2 + multiplicand_12 * multiplier_3;
+  product[1] = multiplicand_1 * multiplier_0 + multiplicand_5 * multiplier_1 +
+               multiplicand_9 * multiplier_2 + multiplicand_13 * multiplier_3;
+  product[2] = multiplicand_2 * multiplier_0 + multiplicand_6 * multiplier_1 +
+               multiplicand_10 * multiplier_2 + multiplicand_14 * multiplier_3;
+  product[3] = multiplicand_3 * multiplier_0 + multiplicand_7 * multiplier_1 +
+               multiplicand_11 * multiplier_2 + multiplicand_15 * multiplier_3;
+  product[4] = multiplicand_0 * multiplier_4 + multiplicand_4 * multiplier_5 +
+               multiplicand_8 * multiplier_6 + multiplicand_12 * multiplier_7;
+  product[5] = multiplicand_1 * multiplier_4 + multiplicand_5 * multiplier_5 +
+               multiplicand_9 * multiplier_6 + multiplicand_13 * multiplier_7;
+  product[6] = multiplicand_2 * multiplier_4 + multiplicand_6 * multiplier_5 +
+               multiplicand_10 * multiplier_6 + multiplicand_14 * multiplier_7;
+  product[7] = multiplicand_3 * multiplier_4 + multiplicand_7 * multiplier_5 +
+               multiplicand_11 * multiplier_6 + multiplicand_15 * multiplier_7;
+  product[8] = multiplicand_0 * multiplier_8 + multiplicand_4 * multiplier_9 +
+               multiplicand_8 * multiplier_10 + multiplicand_12 * multiplier_11;
+  product[9] = multiplicand_1 * multiplier_8 + multiplicand_5 * multiplier_9 +
+               multiplicand_9 * multiplier_10 + multiplicand_13 * multiplier_11;
+  product[10] = multiplicand_2 * multiplier_8 + multiplicand_6 * multiplier_9 +
+                multiplicand_10 * multiplier_10 +
+                multiplicand_14 * multiplier_11;
+  product[11] = multiplicand_3 * multiplier_8 + multiplicand_7 * multiplier_9 +
+                multiplicand_11 * multiplier_10 +
+                multiplicand_15 * multiplier_11;
+  product[12] =
+      multiplicand_0 * multiplier_12 + multiplicand_4 * multiplier_13 +
+      multiplicand_8 * multiplier_14 + multiplicand_12 * multiplier_15;
+  product[13] =
+      multiplicand_1 * multiplier_12 + multiplicand_5 * multiplier_13 +
+      multiplicand_9 * multiplier_14 + multiplicand_13 * multiplier_15;
+  product[14] =
+      multiplicand_2 * multiplier_12 + multiplicand_6 * multiplier_13 +
+      multiplicand_10 * multiplier_14 + multiplicand_14 * multiplier_15;
+  product[15] =
+      multiplicand_3 * multiplier_12 + multiplicand_7 * multiplier_13 +
+      multiplicand_11 * multiplier_14 + multiplicand_15 * multiplier_15;
 }
