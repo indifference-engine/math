@@ -1,10 +1,10 @@
-#include "look_at.h"
+#include "look_at_3.h"
 #include "inverse_square_root.h"
 
-void look_at(const float from_x, const float from_y, const float from_z,
-             const float to_x, const float to_y, const float to_z,
-             const float y_x, const float y_y, const float y_z,
-             float *const forward, float *const inverse) {
+void look_at_3(const float from_x, const float from_y, const float from_z,
+               const float to_x, const float to_y, const float to_z,
+               const float y_x, const float y_y, const float y_z,
+               float *const forward, float *const inverse) {
   float x_x = to_x - from_x;
   float x_y = to_y - from_y;
   float x_z = to_z - from_z;

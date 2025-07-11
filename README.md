@@ -57,7 +57,7 @@ corresponding function available.
 | `inverse_square_root`       | Calculates the approximate inverse square root of a float.                                                                                                                                                           |
 | `normalize`                 | Approximately normalizes the length of a 3D vector (producing a unit vector).                                                                                                                                        |
 | `square_root`               | Calculates the approximate square root of a float.                                                                                                                                                                   |
-| `look_at`                   | Calculates a 4x4 model matrix positioned at a location to "look" from, orienting X+ towards a location to "look" at, and its inverse.                                                                                |
+| `look_at_3`                 | Calculates a 4x4 model matrix positioned at a location to "look" from, orienting X+ towards a location to "look" at, and its inverse.                                                                                |
 | `jointed_look_at_3`         | Calculates 4x4 model matrices which place proximal and distal halves of a limb to fill a span between a location to "look" from and a location to "look" to, and its inverse.  The bend is aligned with the Z+ axis. |
 | `copy_3`                    | Copies a 3D vector.                                                                                                                                                                                                  |
 

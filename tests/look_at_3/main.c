@@ -1,4 +1,4 @@
-#include "../../src/look_at.h"
+#include "../../src/look_at_3.h"
 #include <stdio.h>
 
 static int exit_code = 0;
@@ -33,8 +33,8 @@ scenario(const char *const description, const float from_x, const float from_y,
          const float inverse_14, const float inverse_15) {
   float forward[16], inverse[16];
 
-  look_at(from_x, from_y, from_z, to_x, to_y, to_z, z_x, z_y, z_z, forward,
-          inverse);
+  look_at_3(from_x, from_y, from_z, to_x, to_y, to_z, z_x, z_y, z_z, forward,
+            inverse);
 
   check(description, "forward", 0, forward_0, forward);
   check(description, "forward", 1, forward_1, forward);
