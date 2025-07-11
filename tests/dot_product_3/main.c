@@ -1,4 +1,4 @@
-#include "../../src/dot_product.h"
+#include "../../src/dot_product_3.h"
 #include <stdio.h>
 
 static int exit_code = 0;
@@ -13,7 +13,7 @@ given_heterogenous(const float multiplier_x, const float multiplier_y,
   const float unshared_multiplicand[3] = {multiplicand_x, multiplicand_y,
                                           multiplicand_z};
   const float unshared_product =
-      dot_product(unshared_multiplier, unshared_multiplicand);
+      dot_product_3(unshared_multiplier, unshared_multiplicand);
 
   if (unshared_multiplier[0] != multiplier_x) {
     printf("Multiplier X changed unexpectedly.\n");
@@ -64,7 +64,7 @@ static void given_homogenous(const float multiplier_multiplicand_x,
                                           multiplier_multiplicand_y,
                                           multiplier_multiplicand_z};
   const float unshared_product =
-      dot_product(unshared_multiplier, unshared_multiplicand);
+      dot_product_3(unshared_multiplier, unshared_multiplicand);
 
   if (unshared_multiplier[0] != multiplier_multiplicand_x) {
     printf("Multiplier X changed unexpectedly.\n");
@@ -106,8 +106,8 @@ static void given_homogenous(const float multiplier_multiplicand_x,
   const float shared_multiplier_multiplicand[3] = {multiplier_multiplicand_x,
                                                    multiplier_multiplicand_y,
                                                    multiplier_multiplicand_z};
-  const float shared_product = dot_product(shared_multiplier_multiplicand,
-                                           shared_multiplier_multiplicand);
+  const float shared_product = dot_product_3(shared_multiplier_multiplicand,
+                                             shared_multiplier_multiplicand);
 
   if (shared_multiplier_multiplicand[0] != multiplier_multiplicand_x) {
     printf("Multiplier/multiplicand X changed unexpectedly.\n");

@@ -1,6 +1,6 @@
-#ifndef DOT_PRODUCT_H
+#ifndef DOT_PRODUCT_3_H
 
-#define DOT_PRODUCT_H
+#define DOT_PRODUCT_3_H
 
 /**
  * Calculates the dot product of two 3D vectors.
@@ -10,7 +10,7 @@
  *                     if any component is NaN, infinity or negative infinity.
  * @return product The resulting dot product.
  */
-float dot_product(const float *const multiplier,
-                  const float *const multiplicand);
+float dot_product_3(const float *const multiplier,
+                    const float *const multiplicand);
 
 #endif
