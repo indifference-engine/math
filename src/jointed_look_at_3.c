@@ -1,14 +1,16 @@
-#include "jointed_look_at.h"
+#include "jointed_look_at_3.h"
 #include "inverse_square_root.h"
 #include "lesser.h"
 #include "square_root.h"
 
-void jointed_look_at(const float from_x, const float from_y, const float from_z,
-                     const float length, const float to_x, const float to_y,
-                     const float to_z, const float y_x, const float y_y,
-                     const float y_z, float *const proximal_forward,
-                     float *const proximal_inverse, float *const distal_forward,
-                     float *const distal_inverse) {
+void jointed_look_at_3(const float from_x, const float from_y,
+                       const float from_z, const float length, const float to_x,
+                       const float to_y, const float to_z, const float y_x,
+                       const float y_y, const float y_z,
+                       float *const proximal_forward,
+                       float *const proximal_inverse,
+                       float *const distal_forward,
+                       float *const distal_inverse) {
   float half_delta_x = (to_x - from_x) * 0.5f;
   float half_delta_y = (to_y - from_y) * 0.5f;
   float half_delta_z = (to_z - from_z) * 0.5f;

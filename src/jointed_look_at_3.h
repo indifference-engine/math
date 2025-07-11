@@ -1,6 +1,6 @@
-#ifndef JOINTED_LOOK_AT_H
+#ifndef JOINTED_LOOK_AT_3_H
 
-#define JOINTED_LOOK_AT_H
+#define JOINTED_LOOK_AT_3_H
 
 /**
  * Calculates 4x4 model matrices which place proximal and distal halves of a
@@ -41,11 +41,13 @@
  * @param distal_inverse The 4x4 matrix to which to write the inverse of result
  *                       for the distal half.
  */
-void jointed_look_at(const float from_x, const float from_y, const float from_z,
-                     const float length, const float to_x, const float to_y,
-                     const float to_z, const float z_x, const float z_y,
-                     const float z_z, float *const proximal_forward,
-                     float *const proximal_inverse, float *const distal_forward,
-                     float *const distal_inverse);
+void jointed_look_at_3(const float from_x, const float from_y,
+                       const float from_z, const float length, const float to_x,
+                       const float to_y, const float to_z, const float z_x,
+                       const float z_y, const float z_z,
+                       float *const proximal_forward,
+                       float *const proximal_inverse,
+                       float *const distal_forward,
+                       float *const distal_inverse);
 
 #endif

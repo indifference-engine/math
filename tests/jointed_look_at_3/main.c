@@ -1,4 +1,4 @@
-#include "../../src/jointed_look_at.h"
+#include "../../src/jointed_look_at_3.h"
 #include <stdio.h>
 
 static int exit_code = 0;
@@ -56,9 +56,9 @@ scenario(const char *const description, const float from_x, const float from_y,
   float proximal_forward[16], proximal_inverse[16], distal_forward[16],
       distal_inverse[16];
 
-  jointed_look_at(from_x, from_y, from_z, length, to_x, to_y, to_z, y_x, y_y,
-                  y_z, proximal_forward, proximal_inverse, distal_forward,
-                  distal_inverse);
+  jointed_look_at_3(from_x, from_y, from_z, length, to_x, to_y, to_z, y_x, y_y,
+                    y_z, proximal_forward, proximal_inverse, distal_forward,
+                    distal_inverse);
 
   check(description, "proximal forward", 0, proximal_forward_0,
         proximal_forward);
