@@ -46,21 +46,21 @@ static void given(const float minuend_x, const float minuend_y,
   }
 
   if (unshared[0] != expected_x) {
-    printf("FAIL interpolate_linearly_3([%f, x, x], [%f, x, x]) = [%f, x, "
+    printf("FAIL subtract_3_3([%f, x, x], [%f, x, x]) = [%f, x, "
            "x] (expected %f)\n",
            minuend_x, subtrahend_x, unshared[0], expected_x);
     exit_code = 1;
   }
 
   if (unshared[1] != expected_y) {
-    printf("FAIL interpolate_linearly_3([x, %f, x], [x, %f, x]) = [x, %f, "
+    printf("FAIL subtract_3_3([x, %f, x], [x, %f, x]) = [x, %f, "
            "x] (expected %f)\n",
            minuend_y, subtrahend_y, unshared[1], expected_y);
     exit_code = 1;
   }
 
   if (unshared[2] != expected_z) {
-    printf("FAIL interpolate_linearly_3([x, x, %f], [x, x, %f]) = [x, x, "
+    printf("FAIL subtract_3_3([x, x, %f], [x, x, %f]) = [x, x, "
            "%f] (expected %f)\n",
            minuend_z, subtrahend_z, unshared[2], expected_z);
     exit_code = 1;
@@ -89,21 +89,21 @@ static void given(const float minuend_x, const float minuend_y,
   }
 
   if (shared_minuend_minuend[0] != expected_x) {
-    printf("FAIL interpolate_linearly_3([%f, x, x], [%f, x, x]) = [%f, x, "
+    printf("FAIL subtract_3_3([%f, x, x], [%f, x, x]) = [%f, x, "
            "x] (expected %f)\n",
            minuend_x, subtrahend_x, shared_minuend_minuend[0], expected_x);
     exit_code = 1;
   }
 
   if (shared_minuend_minuend[1] != expected_y) {
-    printf("FAIL interpolate_linearly_3([x, %f, x], [x, %f, x]) = [x, %f, "
+    printf("FAIL subtract_3_3([x, %f, x], [x, %f, x]) = [x, %f, "
            "x] (expected %f)\n",
            minuend_y, subtrahend_y, shared_minuend_minuend[1], expected_y);
     exit_code = 1;
   }
 
   if (shared_minuend_minuend[2] != expected_z) {
-    printf("FAIL interpolate_linearly_3([x, x, %f], [x, x, %f]) = [x, x, "
+    printf("FAIL subtract_3_3([x, x, %f], [x, x, %f]) = [x, x, "
            "%f] (expected %f)\n",
            minuend_z, subtrahend_z, shared_minuend_minuend[2], expected_z);
     exit_code = 1;
@@ -132,7 +132,7 @@ static void given(const float minuend_x, const float minuend_y,
   }
 
   if (shared_subtrahend_subtrahend[0] != expected_x) {
-    printf("FAIL interpolate_linearly_3([%f, x, x], [%f, x, x]) = [%f, x, "
+    printf("FAIL subtract_3_3([%f, x, x], [%f, x, x]) = [%f, x, "
            "x] (expected %f)\n",
            minuend_x, subtrahend_x, shared_subtrahend_subtrahend[0],
            expected_x);
@@ -140,7 +140,7 @@ static void given(const float minuend_x, const float minuend_y,
   }
 
   if (shared_subtrahend_subtrahend[1] != expected_y) {
-    printf("FAIL interpolate_linearly_3([x, %f, x], [x, %f, x]) = [x, %f, "
+    printf("FAIL subtract_3_3([x, %f, x], [x, %f, x]) = [x, %f, "
            "x] (expected %f)\n",
            minuend_y, subtrahend_y, shared_subtrahend_subtrahend[1],
            expected_y);
@@ -148,7 +148,7 @@ static void given(const float minuend_x, const float minuend_y,
   }
 
   if (shared_subtrahend_subtrahend[2] != expected_z) {
-    printf("FAIL interpolate_linearly_3([x, x, %f], [x, x, %f]) = [x, x, "
+    printf("FAIL subtract_3_3([x, x, %f], [x, x, %f]) = [x, x, "
            "%f] (expected %f)\n",
            minuend_z, subtrahend_z, shared_subtrahend_subtrahend[2],
            expected_z);
