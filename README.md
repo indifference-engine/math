@@ -65,6 +65,7 @@ corresponding function available.
 | `multiply_3_3`               | Multiplies a 3D vector by another 3D vector.                                                                                                                                                                         |
 | `copy_16`                    | Copies a 4x4 matrix.                                                                                                                                                                                                 |
 | `multiply_3_1`               | Multiplies a 3D vector by a scalar.                                                                                                                                                                                  |
+| `add_3_3`                    | Adds a 3D vector to another 3D vector.                                                                                                                                                                               |
 
 ## Tests
 
