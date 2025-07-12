@@ -64,6 +64,7 @@ corresponding function available.
 | `subtract_3_3`               | Subtracts a 3D vector from another 3D vector.                                                                                                                                                                        |
 | `multiply_3_3`               | Multiplies a 3D vector by another 3D vector.                                                                                                                                                                         |
 | `copy_16`                    | Copies a 4x4 matrix.                                                                                                                                                                                                 |
+| `multiply_3_1`               | Multiplies a 3D vector by a scalar.                                                                                                                                                                                  |
 
 ## Tests
 
