@@ -6,7 +6,7 @@
  * Multiplies a 3D vector by another 3D vector.
  * @param multiplier The 3D vector to multiply.  Behavior is undefined if
  * any component is NaN, infinity or negative infinity.
- * @param multiplicand The 3D vector to multiply.  Behavior is undefined if
+ * @param multiplicand The 3D vector to multiply by.  Behavior is undefined if
  * any component is NaN, infinity or negative infinity.
  * @param output The 3D vector to write the resulting product 3D vector to.
  * May overlap with the input vectors.
