@@ -162,11 +162,41 @@ static void given(const float multiplier_x, const float multiplier_y,
   }
 }
 
+static void given_shared(const float shared_x, const float shared_y,
+                         const float shared_z, const float expected_x,
+                         const float expected_y, const float expected_z) {
+  float shared[] = {shared_x, shared_y, shared_z};
+
+  multiply_3_3(shared, shared, shared);
+
+  if (shared[0] != expected_x) {
+    printf("FAIL multiply_3_3([%f, x, x], [%f, x, x]) = [%f, x, "
+           "x] (expected %f)\n",
+           shared_x, shared_x, shared[0], expected_x);
+    exit_code = 1;
+  }
+
+  if (shared[1] != expected_y) {
+    printf("FAIL multiply_3_3([x, %f, x], [x, %f, x]) = [x, %f, "
+           "x] (expected %f)\n",
+           shared_y, shared_y, shared[1], expected_y);
+    exit_code = 1;
+  }
+
+  if (shared[2] != expected_z) {
+    printf("FAIL multiply_3_3([x, x, %f], [x, x, %f]) = [x, x, "
+           "%f] (expected %f)\n",
+           shared_z, shared_z, shared[2], expected_z);
+    exit_code = 1;
+  }
+}
+
 int main(const int argc, const char *const *const argv) {
   (void)(argc);
   (void)(argv);
 
   given(2.0f, -8.0f, -3.0f, 0.9f, 0.4f, 0.1f, 1.8f, -3.2f, -0.3f);
+  given_shared(2.2f, -4.7, 0.5f, 4.84f, 22.089998f, 0.25f);
 
   return exit_code;
 }
