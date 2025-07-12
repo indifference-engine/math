@@ -47,21 +47,21 @@ static void given(const float multiplier_x, const float multiplier_y,
   }
 
   if (unshared[0] != expected_x) {
-    printf("FAIL multiply_3([%f, x, x], [%f, x, x]) = [%f, x, "
+    printf("FAIL multiply_3_3([%f, x, x], [%f, x, x]) = [%f, x, "
            "x] (expected %f)\n",
            multiplier_x, multiplicand_x, unshared[0], expected_x);
     exit_code = 1;
   }
 
   if (unshared[1] != expected_y) {
-    printf("FAIL multiply_3([x, %f, x], [x, %f, x]) = [x, %f, "
+    printf("FAIL multiply_3_3([x, %f, x], [x, %f, x]) = [x, %f, "
            "x] (expected %f)\n",
            multiplier_y, multiplicand_y, unshared[1], expected_y);
     exit_code = 1;
   }
 
   if (unshared[2] != expected_z) {
-    printf("FAIL multiply_3([x, x, %f], [x, x, %f]) = [x, x, "
+    printf("FAIL multiply_3_3([x, x, %f], [x, x, %f]) = [x, x, "
            "%f] (expected %f)\n",
            multiplier_z, multiplicand_z, unshared[2], expected_z);
     exit_code = 1;
@@ -69,29 +69,29 @@ static void given(const float multiplier_x, const float multiplier_y,
 
   float shared_multiplier_multiplier[] = {multiplier_x, multiplier_y,
                                           multiplier_z};
-  const float shared_Multiplier_multiplicand[] = {
+  const float shared_multiplier_multiplicand[] = {
       multiplicand_x, multiplicand_y, multiplicand_z};
 
-  multiply_3_3(shared_multiplier_multiplier, shared_Multiplier_multiplicand,
+  multiply_3_3(shared_multiplier_multiplier, shared_multiplier_multiplicand,
                shared_multiplier_multiplier);
 
-  if (shared_Multiplier_multiplicand[0] != multiplicand_x) {
+  if (shared_multiplier_multiplicand[0] != multiplicand_x) {
     printf("Multiplicand X changed unexpectedly.\n");
     exit_code = 1;
   }
 
-  if (shared_Multiplier_multiplicand[1] != multiplicand_y) {
+  if (shared_multiplier_multiplicand[1] != multiplicand_y) {
     printf("Multiplicand Y changed unexpectedly.\n");
     exit_code = 1;
   }
 
-  if (shared_Multiplier_multiplicand[2] != multiplicand_z) {
+  if (shared_multiplier_multiplicand[2] != multiplicand_z) {
     printf("Multiplicand Z changed unexpectedly.\n");
     exit_code = 1;
   }
 
   if (shared_multiplier_multiplier[0] != expected_x) {
-    printf("FAIL multiply_3([%f, x, x], [%f, x, x]) = [%f, x, "
+    printf("FAIL multiply_3_3([%f, x, x], [%f, x, x]) = [%f, x, "
            "x] (expected %f)\n",
            multiplier_x, multiplicand_x, shared_multiplier_multiplier[0],
            expected_x);
@@ -99,7 +99,7 @@ static void given(const float multiplier_x, const float multiplier_y,
   }
 
   if (shared_multiplier_multiplier[1] != expected_y) {
-    printf("FAIL multiply_3([x, %f, x], [x, %f, x]) = [x, %f, "
+    printf("FAIL multiply_3_3([x, %f, x], [x, %f, x]) = [x, %f, "
            "x] (expected %f)\n",
            multiplier_y, multiplicand_y, shared_multiplier_multiplier[1],
            expected_y);
@@ -107,7 +107,7 @@ static void given(const float multiplier_x, const float multiplier_y,
   }
 
   if (shared_multiplier_multiplier[2] != expected_z) {
-    printf("FAIL multiply_3([x, x, %f], [x, x, %f]) = [x, x, "
+    printf("FAIL multiply_3_3([x, x, %f], [x, x, %f]) = [x, x, "
            "%f] (expected %f)\n",
            multiplier_z, multiplicand_z, shared_multiplier_multiplier[2],
            expected_z);
@@ -138,7 +138,7 @@ static void given(const float multiplier_x, const float multiplier_y,
   }
 
   if (shared_multiplicand_multiplicand[0] != expected_x) {
-    printf("FAIL multiply_3([%f, x, x], [%f, x, x]) = [%f, x, "
+    printf("FAIL multiply_3_3([%f, x, x], [%f, x, x]) = [%f, x, "
            "x] (expected %f)\n",
            multiplier_x, multiplicand_x, shared_multiplicand_multiplicand[0],
            expected_x);
@@ -146,7 +146,7 @@ static void given(const float multiplier_x, const float multiplier_y,
   }
 
   if (shared_multiplicand_multiplicand[1] != expected_y) {
-    printf("FAIL multiply_3([x, %f, x], [x, %f, x]) = [x, %f, "
+    printf("FAIL multiply_3_3([x, %f, x], [x, %f, x]) = [x, %f, "
            "x] (expected %f)\n",
            multiplier_y, multiplicand_y, shared_multiplicand_multiplicand[1],
            expected_y);
@@ -154,7 +154,7 @@ static void given(const float multiplier_x, const float multiplier_y,
   }
 
   if (shared_multiplicand_multiplicand[2] != expected_z) {
-    printf("FAIL multiply_3([x, x, %f], [x, x, %f]) = [x, x, "
+    printf("FAIL multiply_3_3([x, x, %f], [x, x, %f]) = [x, x, "
            "%f] (expected %f)\n",
            multiplier_z, multiplicand_z, shared_multiplicand_multiplicand[2],
            expected_z);
