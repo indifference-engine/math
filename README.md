@@ -14,6 +14,7 @@ corresponding function available.
 ### Assumptions
 
 - The compilation environment supports C99.
+- The `-ffp-contract=off` CFLAG is set.
 - No float arguments:
   - Are NaN.
   - Are infinity.
