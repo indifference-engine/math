@@ -63,6 +63,7 @@ corresponding function available.
 | `interpolate_linearly_3_3_1` | Linearly interpolates between two 3D vectors.                                                                                                                                                                        |
 | `subtract_3_3`               | Subtracts a 3D vector from another 3D vector.                                                                                                                                                                        |
 | `multiply_3_3`               | Multiplies a 3D vector by another 3D vector.                                                                                                                                                                         |
+| `copy_16`                    | Copies a 4x4 matrix.                                                                                                                                                                                                 |
 
 ## Tests
 
